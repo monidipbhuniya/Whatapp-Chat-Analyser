@@ -3,7 +3,17 @@ import streamlit as st
 import preprocessor , helper
 import seaborn as sns
 
-st.sidebar.title("Whatsapp Chat Analyser")
+# Title
+st.title("📊 WhatsApp Chat Analyzer")
+
+# Instructions section
+st.info("""
+### 📌 Instructions for Using the App:
+1. Make sure your WhatsApp export **time format is 12-hour (am/pm)**.
+2. Open WhatsApp → More Options → Export Chat → **Without Media**.
+3. Save the exported **.txt file**.
+4. Upload the file here to start analyzing.
+""")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
